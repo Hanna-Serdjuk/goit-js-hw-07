@@ -54,8 +54,8 @@ function onImageClick(event) {
 
     const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" width="800" height="600">`,
-    {onShow: (instance) => {document.addEventListener('keydown', closeInstance)}}, 
-    {onClose: (instance) => {document.removeEventListener('keydown', closeInstance)}}
+    {onShow: () => {document.addEventListener('keydown', closeInstance)}}, 
+    {onClose: () => {document.removeEventListener('keydown', closeInstance)}}
     );
 
     instance.show();

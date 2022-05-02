@@ -24,6 +24,8 @@ const renderCard = crateGalleryCard(galleryItems);
 
 gallery.insertAdjacentHTML('beforeend',renderCard);
 
+
+
 function crateGalleryCard(galleryItems) {
 
     return galleryItems.map(({preview,original,description}) => {
